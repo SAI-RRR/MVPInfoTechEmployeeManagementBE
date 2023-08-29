@@ -1,7 +1,6 @@
 package com.app.entity;
 
-import java.util.Calendar;
-
+import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,14 +24,59 @@ public class LeaveRequestEntity {
 	private String leaveType;
 	
 	@Column(name="Emp_Start_Date")
-	private Calendar empStartDate;
+	private LocalDate empStartDate;
 	
 	@Column(name="Emp_End_Date")
-	private Calendar empEndDate;
+	private LocalDate empEndDate;
 	
 	@Column(name="Emp_Reason")
 	private String empreason;
 	
+	@Column(name="leave_status")
+	private String leave_Status;
+	
+	@Column(name="No_Of_Days")
+	private Integer No_of_Days;
+	
+	@Column(name="Total_Leaves")
+	private Integer total_leaves;
+	
+
+	public Integer getTotal_leaves() {
+		return total_leaves;
+	}
+
+	public void setTotal_leaves(Integer total_leaves) {
+		this.total_leaves = total_leaves;
+	}
+
+
+
+	public Integer getNo_of_Days() {
+		return No_of_Days;
+	}
+
+
+
+	public void setNo_of_Days(Integer no_of_Days) {
+		No_of_Days = no_of_Days;
+	}
+
+
+
+
+	public String getLeave_Status() {
+		return leave_Status;
+	}
+
+
+
+	public void setLeave_Status(String leave_Status) {
+		this.leave_Status = leave_Status;
+	}
+
+
+
 	public Long getId() {
 		return id;
 	}
@@ -54,20 +98,20 @@ public class LeaveRequestEntity {
 	}
 	
 	
-	public Calendar getEmpStartDate() {
+	public LocalDate getEmpStartDate() {
 		return empStartDate;
 	}
-	public void setEmpStartDate(Calendar empStartDate) {
+	public void setEmpStartDate(LocalDate empStartDate) {
 		this.empStartDate = empStartDate;
 	}
 	
 	
-	public Calendar getEmpEndDate() {
+	public LocalDate getEmpEndDate() {
 		return empEndDate;
 	}
 	
 	
-	public void setEmpEndDate(Calendar empEndDate) {
+	public void setEmpEndDate(LocalDate empEndDate) {
 		this.empEndDate = empEndDate;
 	}
 	

@@ -20,7 +20,7 @@ public class LeaveDetailsFormController {
 	@Autowired
 	private LeaveDetailsFormService leaveDetailsFormService;
 
-	@PostMapping("/save_Dtls")
+	@PostMapping("/save_Dtls/Api")
 	public LeaveDetailsFormEntity createLeaves(@RequestBody LeaveDetailsFormDTO leaveDetails) {
 		return leaveDetailsFormService.addLeaveDetails(leaveDetails);
 	}

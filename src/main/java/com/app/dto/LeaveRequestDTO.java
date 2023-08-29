@@ -1,17 +1,24 @@
 package com.app.dto;
 
-import java.util.Calendar;
+import java.time.LocalDate;
 
 public class LeaveRequestDTO {
 
 	
 	private String empName;
 	private String leaveType;
-	private Calendar startDate;
-	private Calendar endDate;
+	private LocalDate startDate;
+	private LocalDate endDate;
 	private String reason;
+	private Integer No_of_Days;
 	
 	
+	public Integer getNo_of_Days() {
+		return No_of_Days;
+	}
+	public void setNo_of_Days(Integer no_of_Days) {
+		No_of_Days = no_of_Days;
+	}
 	public String getEmpName() {
 		return empName;
 	}
@@ -24,16 +31,16 @@ public class LeaveRequestDTO {
 	public void setLeaveType(String leaveType) {
 		this.leaveType = leaveType;
 	}
-	public Calendar getStartDate() {
+	public LocalDate getStartDate() {
 		return startDate;
 	}
-	public void setStartDate(Calendar startDate) {
+	public void setStartDate(LocalDate startDate) {
 		this.startDate = startDate;
 	}
-	public Calendar getEndDate() {
+	public LocalDate getEndDate() {
 		return endDate;
 	}
-	public void setEndDate(Calendar endDate) {
+	public void setEndDate(LocalDate endDate) {
 		this.endDate = endDate;
 	}
 	public String getReason() {
