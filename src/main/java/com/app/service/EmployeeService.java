@@ -8,7 +8,7 @@ import com.app.entity.EmpDetailsEntity;
 public interface EmployeeService {
 	
 	EmpDetailsEntity createEmployee(EmpDetails empEntity);
-	EmpDetailsEntity getEmpDetailsmvp(long id);
+	EmpDetailsEntity getEmpDetails(long id);
 	EmpDetailsEntity updateEmp(EmpDetailsEntity empEntity, long id);
 	String deleteEmployee(long id);
 	List<EmpDetails> findAll();
