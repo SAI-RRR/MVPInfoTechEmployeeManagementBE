@@ -24,25 +24,51 @@ public class LeaveRequestServiceImpl implements LeaveRequestService {
 		leaveRequestEntity.setLeaveType(leaveRequestdto.getLeaveType());
 		leaveRequestEntity.setEmpStartDate(leaveRequestdto.getStartDate());
 		leaveRequestEntity.setEmpEndDate(leaveRequestdto.getEndDate());
-		leaveRequestEntity.setTotal_leaves(12);
+		leaveRequestdto.setCasual_leaves(2);
+		leaveRequestdto.setSick_leaves(2);
+		leaveRequestEntity.setSick_leaves(leaveRequestdto.getSick_leaves());
+		leaveRequestEntity.setCasual_leaves(leaveRequestdto.getCasual_leaves());
+		leaveRequestEntity.setTotal_leaves((leaveRequestdto.getSick_leaves()+leaveRequestdto.getCasual_leaves()));
+		leaveRequestEntity.setCompensation_leaves(leaveRequestdto.getCompensation_leaves());
 		
+		//Conditions for leave-types
 		long diff=ChronoUnit.DAYS.between(leaveRequestdto.getStartDate(), leaveRequestdto.getEndDate());
 		leaveRequestEntity.setNo_of_Days((int)diff);
-		if(leaveRequestEntity.getLeaveType().equals("sick-leave") &&diff<=leaveRequestEntity.getTotal_leaves()) {
+		if(leaveRequestEntity.getLeaveType().equals("sick-leave") &&leaveRequestEntity.getNo_of_Days()<=leaveRequestdto.getSick_leaves()) {
 			System.out.println("sick-leave Approved");
-			leaveRequestEntity.setLeave_Status("Approved");
-		}else if(leaveRequestEntity.getLeaveType().equals("compensation-leave") &&diff<=leaveRequestEntity.getTotal_leaves()) {
-			System.out.println("compensation-leave Approved");
-			leaveRequestEntity.setLeave_Status("Approved");
-		
+			leaveRequestEntity.setTotal_leaves(leaveRequestEntity.getTotal_leaves()-(int)diff);
+			leaveRequestEntity.setSick_leaves(leaveRequestdto.getSick_leaves()-leaveRequestEntity.getNo_of_Days());
+			leaveRequestEntity.setLeave_Status("sick-leave Approved");
+		}else if(leaveRequestEntity.getLeaveType().equals("casual-leave") &&leaveRequestEntity.getNo_of_Days()<=leaveRequestdto.getCasual_leaves()) {
+			System.out.println("Approved");
+			
+			leaveRequestEntity.setTotal_leaves(leaveRequestEntity.getTotal_leaves()-(int)diff);
+			leaveRequestEntity.setCasual_leaves(leaveRequestdto.getCasual_leaves()-leaveRequestEntity.getNo_of_Days());
+			leaveRequestEntity.setLeave_Status("casual-leave Approved");
 		}
-		else if(leaveRequestEntity.getLeaveType().equals("loss-of-pay") &&diff<=leaveRequestEntity.getTotal_leaves()) {
+//		else if(leaveRequestEntity.getLeaveType().equals("compensation-leave") &&leaveRequestEntity.getNo_of_Days()<=leaveRequestEntity.getTotal_leaves()) {
+//			System.out.println("compensation-leave Approved");
+//			leaveRequestEntity.setLeave_Status("Approved");
+//		
+//		}
+		else if(leaveRequestEntity.getLeaveType().equals("loss-of-pay") &&leaveRequestEntity.getNo_of_Days()<=leaveRequestEntity.getTotal_leaves()) {
 			System.out.println("Loss of pay");
 			leaveRequestEntity.setLeave_Status("Loss of pay");
 		}else {
+			if(leaveRequestEntity.getLeaveType().equals("compensation-leave") &&leaveRequestEntity.getNo_of_Days()<=leaveRequestdto.getCompensation_leaves()) {
+				System.out.println("--------------------------------------------------------");
+				 leaveRequestEntity.setCompensation_leaves(leaveRequestdto.getCompensation_leaves()-leaveRequestEntity.getNo_of_Days());
+				System.out.println("compensation-leave Approved");
+				leaveRequestEntity.setLeave_Status("Approved");
+			}else {
 			System.out.println("Rejected");
 			leaveRequestEntity.setLeave_Status("Rejected");
 		}
+		}
+		
+		 
+		
+		
 		/*
 		 * //leaveRequestEntity.setDuration(Duration.between(leaveRequestdto.
 		 * getStartDate(), leaveRequestdto.getEndDate()));

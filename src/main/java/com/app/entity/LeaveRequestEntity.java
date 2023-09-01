@@ -41,6 +41,34 @@ public class LeaveRequestEntity {
 	@Column(name="Total_Leaves")
 	private Integer total_leaves;
 	
+	@Column(name="sick_Leaves")
+	private Integer sick_leaves;
+	
+	@Column(name="casual_Leaves")
+	private Integer casual_leaves;
+	
+	@Column(name="compensation_Leaves")
+	private Integer compensation_leaves;
+
+	public Integer getSick_leaves() {
+		return sick_leaves;
+	}
+	public void setSick_leaves(Integer sick_leaves) {
+		this.sick_leaves = sick_leaves;
+	}
+	public void setCasual_leaves(Integer casual_leaves) {
+		this.casual_leaves = casual_leaves;
+	}
+	public void setCompensation_leaves(Integer compensation_leaves) {
+		this.compensation_leaves = compensation_leaves;
+	}
+	public Integer getCasual_leaves() {
+		return casual_leaves;
+	}
+
+	public Integer getCompensation_leaves() {
+		return compensation_leaves;
+	}
 
 	public Integer getTotal_leaves() {
 		return total_leaves;

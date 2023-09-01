@@ -11,8 +11,30 @@ public class LeaveRequestDTO {
 	private LocalDate endDate;
 	private String reason;
 	private Integer No_of_Days;
+	private int total_leaves;
+	private int sick_leaves;
+	private int casual_leaves;
+	private int compensation_leaves;
 	
+	public int getCompensation_leaves() {
+		return compensation_leaves;
+	}
+	public void setCompensation_leaves(int compensation_leaves) {
+		this.compensation_leaves = compensation_leaves;
+	}
+	public int getTotal_leaves() {
+		return total_leaves;
+	}
+	public void setTotal_leaves(int total_leaves) {
+		this.total_leaves = total_leaves;
+	}
 	
+	public void setSick_leaves(int sick_leaves) {
+		this.sick_leaves = 6;
+	}
+	public void setCasual_leaves(int casual_leaves) {
+		this.casual_leaves = 6;
+	}
 	public Integer getNo_of_Days() {
 		return No_of_Days;
 	}
@@ -49,6 +71,10 @@ public class LeaveRequestDTO {
 	public void setReason(String reason) {
 		this.reason = reason;
 	}
-	
-	
+	public int getSick_leaves() {
+		return sick_leaves;
+	}
+	public int getCasual_leaves() {
+		return casual_leaves;
+	}
 }
