@@ -18,7 +18,7 @@ import com.app.service.EmployeeService;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/api/v1/")
+@RequestMapping("/api/v1")
 public class EmpDetailsController {
 	
 	@Autowired

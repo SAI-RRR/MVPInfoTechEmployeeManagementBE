@@ -15,7 +15,7 @@ import com.app.repository.MultipartRepository;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping(path = "check")
+@RequestMapping(path = "/check")
 
 public class MultipartController {
 
