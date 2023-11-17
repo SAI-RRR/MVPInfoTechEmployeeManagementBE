@@ -30,7 +30,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	}
 
 	@Override
-	public EmpDetailsEntity getEmpDetailsmvp(long id) {
+	public EmpDetailsEntity getEmpDetails(long id) {
 		return empDetailsRepository.findById(id).orElse(null);
 
 	}

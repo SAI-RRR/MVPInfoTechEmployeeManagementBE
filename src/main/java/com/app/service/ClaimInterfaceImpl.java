@@ -10,6 +10,10 @@ import com.app.entity.ClaimEntity;
 import com.app.entity.ClaimType;
 import com.app.repository.ClaimsRepositery;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e061848243c26a4567b77e36a19e814bbb86db79
 @Service
 public class ClaimInterfaceImpl implements ClaimInterface  {
 	@Autowired

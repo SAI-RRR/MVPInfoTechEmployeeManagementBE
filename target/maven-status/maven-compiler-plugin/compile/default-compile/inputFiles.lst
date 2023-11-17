@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\HARI\Spring_practice\mvpEmpManagement\src\main\java\com\app\repository\UserRepository.java
 D:\HARI\Spring_practice\mvpEmpManagement\src\main\java\com\app\service\EmployeeService.java
 D:\HARI\Spring_practice\mvpEmpManagement\src\main\java\com\app\dto\FileUpload.java
@@ -26,3 +27,36 @@ D:\HARI\Spring_practice\mvpEmpManagement\src\main\java\com\app\controller\Multip
 D:\HARI\Spring_practice\mvpEmpManagement\src\main\java\com\app\dto\EmpDetails.java
 D:\HARI\Spring_practice\mvpEmpManagement\src\main\java\com\app\entity\UserEntity.java
 D:\HARI\Spring_practice\mvpEmpManagement\src\main\java\com\app\repository\MultipartRepository.java
+=======
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\entity\EmpDetailsEntity.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\controller\EmployeeAttendanceController.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\service\LeaveRequestService.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\entity\EmployeeAttendanceEntity.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\controller\EmpDetailsController.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\controller\MultipartController.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\repository\EmpDetailsRepository.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\service\UserServiceImpl.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\dto\UserDetails.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\dto\EmpDetails.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\repository\EmployeeAttendanceRepository.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\repository\MultipartRepository.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\controller\UserController.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\repository\LeaveRequestRepository.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\controller\LeaveDetailsFormController.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\entity\UserEntity.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\dto\LeaveRequestDTO.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\service\LeaveDetailsFromServiceImpl.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\dto\LeaveDetailsFormDTO.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\service\LeaveRequestServiceImpl.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\entity\LeaveDetailsFormEntity.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\service\EmployeeService.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\repository\UserRepository.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\entity\LeaveRequestEntity.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\service\LeaveDetailsFormService.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\service\EmployeeServiceImpl.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\entity\MultipartEntity.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\controller\LeaveRequestController.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\repository\LeaveDetailsFormRepository.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\MvpLoginPageApplication.java
+D:\EmployeeManagementSystem\mvpEmpManagement\src\main\java\com\app\service\UserService.java
+>>>>>>> e061848243c26a4567b77e36a19e814bbb86db79
