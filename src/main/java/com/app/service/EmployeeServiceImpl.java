@@ -30,7 +30,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	}
 
 	@Override
-	public EmpDetailsEntity getEmpDetailsmvp(long id) {
+	public EmpDetailsEntity getEmpDetails(long id) {
 		return empDetailsRepository.findById(id).orElse(null);
 
 	}
@@ -68,10 +68,12 @@ public class EmployeeServiceImpl implements EmployeeService{
 			//create new emp details dto
 			EmpDetails empDetailsDTO = new EmpDetails();
 			//set the values to the new emp deatils dto
+			empDetailsDTO.setId(empDetailsEntity.getId());
 			empDetailsDTO.setEmpName(empDetailsEntity.getEmpName());
 			empDetailsDTO.setEmail(empDetailsEntity.getEmail());
 			empDetailsDTO.setDesignation(empDetailsEntity.getDesignation());
 			empDetailsDTO.setLocation(empDetailsEntity.getLocation());
+			empDetailsDTO.setAddress(empDetailsEntity.getAddress());
 			//add the new emp details to list
 			empdetailsDTOList.add(empDetailsDTO);
 		}

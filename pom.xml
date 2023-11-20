@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.app</groupId>
-	<artifactId>MVPLoginPage</artifactId>
+	<artifactId>mvpEmpManagement</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MVPLoginPage</name>
+	<name>mvpEmpManagement</name>
 	<description>CRUD App</description>
 	<properties>
 		<java.version>11</java.version>
@@ -47,6 +47,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
+
 	</dependencies>
 
 	<build>
@@ -54,14 +60,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
+				<!--<configuration>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
-				</configuration>
+				</configuration>-->
 			</plugin>
 		</plugins>
 	</build>

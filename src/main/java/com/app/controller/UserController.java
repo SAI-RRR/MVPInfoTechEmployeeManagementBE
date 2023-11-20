@@ -24,8 +24,11 @@ public class UserController {
 	public UserService userService;
 	
 	  @PostMapping("/login") 
-	  public ResponseEntity<UserDetails> loginUser(@RequestBody UserDetails userDetails) {
-		  return userService.loginUser(userDetails); 
+	  public ResponseEntity<?> loginUser(@RequestBody UserDetails userDetails) {
+		  UserDetails userDtls=userService.loginUser(userDetails);
+		  if(userDtls!=null)
+		  return ResponseEntity.ok(userDtls) ; 
+		  return (ResponseEntity<?>) ResponseEntity.internalServerError();
 		  }
 	 
 	

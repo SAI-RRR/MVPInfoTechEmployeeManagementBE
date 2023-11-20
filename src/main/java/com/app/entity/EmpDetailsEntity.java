@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name="empDetailsmvp")
 public class EmpDetailsEntity {
@@ -32,51 +35,4 @@ public class EmpDetailsEntity {
 	public EmpDetailsEntity() {
 		
 	}
-	public EmpDetailsEntity(String empName, String designation, String location, String email, String address) {
-		super();
-		this.empName = empName;
-		this.designation = designation;
-		this.location = location;
-		this.email = email;
-		this.address = address;
-	}
-	public long getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getEmpName() {
-		return empName;
-	}
-	public void setEmpName(String empName) {
-		this.empName = empName;
-	}
-	public String getDesignation() {
-		return designation;
-	}
-	public void setDesignation(String designation) {
-		this.designation = designation;
-	}
-	public String getLocation() {
-		return location;
-	}
-	public void setLocation(String location) {
-		this.location = location;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	
-
-
 }

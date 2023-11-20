@@ -9,6 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name="employee_attendance")
 public class EmployeeAttendanceEntity {
@@ -20,36 +23,5 @@ public class EmployeeAttendanceEntity {
     private LocalDateTime inTime;
     private LocalDateTime outTime;
     private Duration duration;
-	public Duration getDuration() {
-		return duration;
-	}
-	public void setDuration(Duration duration) {
-		this.duration = duration;
-	}
-	public Long getEmployeeId() {
-		return employeeId;
-	}
-	public void setEmployeeId(Long employeeId) {
-		this.employeeId = employeeId;
-	}
-	public String getEmployeeName() {
-		return employeeName;
-	}
-	public void setEmployeeName(String employeeName) {
-		this.employeeName = employeeName;
-	}
-	public LocalDateTime getInTime() {
-		return inTime;
-	}
-	public void setInTime(LocalDateTime inTime) {
-		this.inTime = inTime;
-	}
-	public LocalDateTime getOutTime() {
-		return outTime;
-	}
-	public void setOutTime(LocalDateTime outTime) {
-		this.outTime = outTime;
-	}
-
     
 }

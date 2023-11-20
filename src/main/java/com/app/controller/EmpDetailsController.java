@@ -18,7 +18,7 @@ import com.app.service.EmployeeService;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/api/v1/")
+@RequestMapping("/api/v1")
 public class EmpDetailsController {
 	
 	@Autowired
@@ -39,7 +39,7 @@ public class EmpDetailsController {
 	// get employee by id
 	@GetMapping("/employee/{id}")
 	public EmpDetailsEntity getEmpDetailsmvp(@PathVariable Long id) {
-		return employeeService.getEmpDetailsmvp(id) ;
+		return employeeService.getEmpDetails(id) ;
 	}
 
 	// update employee details by id
