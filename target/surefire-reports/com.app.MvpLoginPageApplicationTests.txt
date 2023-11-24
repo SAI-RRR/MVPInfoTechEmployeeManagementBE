@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.app.MvpLoginPageApplicationTests
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.292 s - in com.app.MvpLoginPageApplicationTests
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.362 s - in com.app.MvpLoginPageApplicationTests
->>>>>>> e061848243c26a4567b77e36a19e814bbb86db79
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.055 s - in com.app.MvpLoginPageApplicationTests

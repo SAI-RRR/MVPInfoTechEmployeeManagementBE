@@ -10,12 +10,12 @@ import com.app.entity.LeaveRequestEntity;
 import com.app.repository.LeaveRequestRepository;
 
 @Service
-public class LeaveRequestServiceImpl implements LeaveRequestService {
+public class LeaveRequestServiceImpl  {
 
 	@Autowired
 	private LeaveRequestRepository leaveRequestRepository;
 
-	@Override
+	
 	public LeaveRequestEntity addLeaveRequest(LeaveRequestDTO leaveRequestdto) {
 
 		LeaveRequestEntity leaveRequestEntity = new LeaveRequestEntity();

@@ -1,11 +1,14 @@
 package com.app.service;
 
-import org.springframework.web.multipart.MultipartFile;
+import java.util.List;
 
-import com.app.entity.ClaimType;
-
+import com.app.dto.ClaimsDTO;
+import com.app.entity.ClaimEntity;
 
 public interface ClaimInterface {
-	public String claimfileUpload(MultipartFile file,String name,ClaimType claimType,double amount,String description );
-
+	
+	public ClaimEntity post(ClaimsDTO  claimsDTO);
+	
+	//public List<ClaimEntity> list();
+	
 }
