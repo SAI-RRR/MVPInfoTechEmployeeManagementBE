@@ -39,6 +39,7 @@ public class EmpDetailsController {
 	// get employee by id
 	@GetMapping("/employee/{id}")
 	public EmpDetailsEntity getEmpDetailsmvp(@PathVariable Long id) {
+		System.out.println("new updates;");
 		return employeeService.getEmpDetails(id) ;
 	}
 
